@@ -13,6 +13,10 @@
 		717A4D5728CB35C900CE0FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717A4D5528CB35C900CE0FAD /* Main.storyboard */; };
 		717A4D5928CB35CC00CE0FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717A4D5828CB35CC00CE0FAD /* Assets.xcassets */; };
 		717A4D5C28CB35CC00CE0FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717A4D5A28CB35CC00CE0FAD /* LaunchScreen.storyboard */; };
+		717A4D6528CB364C00CE0FAD /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 717A4D6428CB364C00CE0FAD /* Then */; };
+		717A4D6828CB365800CE0FAD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 717A4D6728CB365800CE0FAD /* SnapKit */; };
+		717A4D6A28CB367000CE0FAD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A4D6928CB367000CE0FAD /* ViewModel.swift */; };
+		717A4D6D28CB373400CE0FAD /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A4D6C28CB373400CE0FAD /* UITextField+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		717A4D5828CB35CC00CE0FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		717A4D5B28CB35CC00CE0FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		717A4D5D28CB35CC00CE0FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		717A4D6928CB367000CE0FAD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		717A4D6C28CB373400CE0FAD /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717A4D6528CB364C00CE0FAD /* Then in Frameworks */,
+				717A4D6828CB365800CE0FAD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 		717A4D4E28CB35C900CE0FAD /* TextFieldDebounce */ = {
 			isa = PBXGroup;
 			children = (
+				717A4D6B28CB372800CE0FAD /* Extension */,
 				717A4D4F28CB35C900CE0FAD /* AppDelegate.swift */,
 				717A4D5128CB35C900CE0FAD /* SceneDelegate.swift */,
 				717A4D5328CB35C900CE0FAD /* ViewController.swift */,
@@ -63,8 +72,17 @@
 				717A4D5828CB35CC00CE0FAD /* Assets.xcassets */,
 				717A4D5A28CB35CC00CE0FAD /* LaunchScreen.storyboard */,
 				717A4D5D28CB35CC00CE0FAD /* Info.plist */,
+				717A4D6928CB367000CE0FAD /* ViewModel.swift */,
 			);
 			path = TextFieldDebounce;
+			sourceTree = "<group>";
+		};
+		717A4D6B28CB372800CE0FAD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				717A4D6C28CB373400CE0FAD /* UITextField+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +101,10 @@
 			dependencies = (
 			);
 			name = TextFieldDebounce;
+			packageProductDependencies = (
+				717A4D6428CB364C00CE0FAD /* Then */,
+				717A4D6728CB365800CE0FAD /* SnapKit */,
+			);
 			productName = TextFieldDebounce;
 			productReference = 717A4D4C28CB35C900CE0FAD /* TextFieldDebounce.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 717A4D4328CB35C900CE0FAD;
+			packageReferences = (
+				717A4D6328CB364C00CE0FAD /* XCRemoteSwiftPackageReference "Then" */,
+				717A4D6628CB365800CE0FAD /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 717A4D4D28CB35C900CE0FAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717A4D6D28CB373400CE0FAD /* UITextField+Extension.swift in Sources */,
 				717A4D5428CB35C900CE0FAD /* ViewController.swift in Sources */,
 				717A4D5028CB35C900CE0FAD /* AppDelegate.swift in Sources */,
+				717A4D6A28CB367000CE0FAD /* ViewModel.swift in Sources */,
 				717A4D5228CB35C900CE0FAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +386,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		717A4D6328CB364C00CE0FAD /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		717A4D6628CB365800CE0FAD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		717A4D6428CB364C00CE0FAD /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 717A4D6328CB364C00CE0FAD /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		717A4D6728CB365800CE0FAD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 717A4D6628CB365800CE0FAD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 717A4D4428CB35C900CE0FAD /* Project object */;
 }
